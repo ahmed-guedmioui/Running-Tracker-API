@@ -1,4 +1,4 @@
 FROM openjdk:17.0.1-jdk-slim
+COPY running-tracker-api.jar app.jar
 EXPOSE 8080
-COPY running-tracker-api.jar running-tracker-api.jar
-ENTRYPOINT ["java", "-jar", "running-tracker-api.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
